@@ -1,0 +1,12 @@
+image: ruby:2.5.1
+
+stages:
+  - test
+
+unit_test:
+  stage: test
+  script:
+    - gem install sinatra
+    - gem install sinatra-cross_origin
+    - gem install rack-test
+    - ruby test.rb
